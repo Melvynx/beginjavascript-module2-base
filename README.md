@@ -14,6 +14,14 @@ Dans ce premier projet, on va juste :
 - [npm](https://nodejs.org/en/) - v6 ou plus
 - [VSCode](https://code.visualstudio.com/download) - 1.78.2 ou plus
 
+Vérifie que tout est ok : 
+
+```bash
+git -v
+node -v
+npm -v
+```
+
 ## Cloner le projet
 
 - Ouvrir un terminal
