@@ -1,0 +1,14 @@
+{
+  "name": "setup-vscode",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon script.js",
+    "start": "node script.js",
+    "beginjavascript": "echo 'hello beginjavascript, je suis un script bash !'"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

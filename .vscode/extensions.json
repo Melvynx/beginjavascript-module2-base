@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-rename-tag",
+    "naumovs.color-highlight",
+    "pkief.material-icon-theme",
+    "usernamehw.errorlens",
+    "orta.vscode-twoslash-queries",
+    "visualstudioexptteam.vscodeintellicode",
+    "sburg.vscode-javascript-booster",
+    "meganrogge.template-string-converter",
+    "dracula-theme.theme-dracula"
+  ]
+}
