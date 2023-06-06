@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
   }
 }
