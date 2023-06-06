@@ -1,96 +1,110 @@
-Dans cet exercice, nous allons créer "ADDITION-MASTER ™️" ! C'est une petite application qui permet d'additionner deux nombres.
+La même chose que pour l'exercice sur les nombres, on va directe dans des exercices sur les string pour te mettre dans le bain.
 
-Je tiens à te dire que **tu ne sais pas encore comment faire**, mais je te lance directement dans la fosse aux lions avec un exercice **compliqué** afin de maximiser ta compréhension.
+Dans cette exercice, on va créer une petite app qui envoie des mails pour nous (mais on va pas vraiment les envoyés) !
 
-C'est ce que j'appelle la **difficulté désirable**, ton cerveau mémorise mieux les choses si tu es en difficulté.
+## Partie 1
 
-Dans cet exercice, nous allons utiliser des notions que j'expliquerai dans la suite du cours... Le but ici est de te débrouiller, d'échouer, de réessayer, puis de regarder les vidéos solutions pour apprendre rapidement.
+Pour envoyer le mail on aura besoin de 3 informations :
 
-Pourquoi ?
+1. L'adresse mail du destinataire
+2. Le sujet du mail
+3. Le contenu du mail
 
-Le fait de voir "vite fait" plein de sujets _que tu ne connais pas encore_ va créer de la curiosité, et quand je t'expliquerai comment ça fonctionne, le fait d'avoir fait un exercice maintenant te fera retenir entre 2x et 3x mieux.
+Ta mission est de créer un script qui récupère ces 3 informations puis affiche un résultat comme celui-ci :
 
-N'oublie pas que tout ce que je fais, c'est pour maximiser ta compréhension globale. Et surtout, n'oublie pas que si c'est compliqué, c'est que **tu apprends**.
+```
+The mail is sending...
 
-## Partie 1 - Simple addition
-
-Dans le fichier [script.js](./script.js), tu trouveras un code rempli de commentaires. Ta tâche est de faire en sorte que quand je lance le script, j'obtienne le résultat suivant :
-
-![](./images/solution1.png)
-
-Pour cela, tu vas utiliser plein de choses que tu ne connais pas encore, mais ce n'est pas grave, tu vas apprendre en faisant.
-
-1. La fonction `prompt` que j'ai créée dans [helper.js](./helper.js), qui te permet de récupérer l'input d'un utilisateur.
-
-Tu ne connais pas encore les fonctions, mais ne t'en fais pas. Il te suffit pour l'instant de savoir **comment les utiliser** :
-
-```js
-const result = await prompt('Quel est ton nom ?');
-console.log(result);
+To : <DESTINATAIRE>
+Object : <OBJECT>
+<MESSAGE>
 ```
 
-Cela fera apparaître ceci :
+Exemple :
 
-![](./images/prompt-fn.png)
+```
+NODE-MAILER ™️
+Enter recipient your email : jeanmichel@gmail.com
+Enter your object : Rdv à 15h
+Enter your message : On avait rendez-vous à 15h, ou est tu ! C'est urgent.
 
-Le `await` permet d'**attendre** que l'utilisateur écrive et appuie sur entrée.
 
-Le `result` est toujours une **chaîne de caractères** (string) car c'est ce que l'utilisateur a écrit.
-
-2. Transformer une chaîne de caractères en nombre
-
-Dans notre exercice, nous devrons transformer une chaîne de caractères en un nombre. Pour cela, nous utiliserons la fonction `Number` qui fait cela !
-
-```js
-const result = Number('123');
-console.log(result); // 123
+The mail is sending...
+To user :  jeanmichel@gmail.com
+Object :  Rdv à 15h
+On avait rendez-vous à 15h, ou est tu ! C'est urgent.
 ```
 
-3. Afficher un résultat
+## Partie 2 - Template string
 
-Pour afficher le résultat, tu auras besoin d'utiliser une opération arithmétique. Je te laisse consulter [l'opération "+"](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Addition) pour trouver la bonne.
+Ici on fait pleins de `console.log`... il y a moyen de rendre ce code beaucoup plus propre en utilisant les [template string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) !
 
-Ensuite, tu peux afficher le résultat en utilisant `console.log`, qui accepte plusieurs arguments.
+Tu peux les utiliser simplement en utilisant les backticks (`` ` ``) à la place des quotes (`'` ou `"`) et en utilisant `${}` pour insérer une variable dans le string.
 
 ```js
-const a = 1;
-const b = 2;
+const name = 'Jean-Michel';
 
-console.log('Variable A : ', a, ', Variable B : ', b);
-// Variable A : 1, Variable B : 2
+console.log(`Hello ${name} !`);
 ```
 
-Allez, je te laisse te lancer
-
-, on se retrouve dans la solution !
-
-## Partie 2 - Soustraction
-
-Maintenant que tu as réussi à faire une addition, nous allons faire une soustraction. Tu peux garder le même code, mais le modifier pour utiliser une soustraction.
-
-- [Opérateur de soustraction](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
-
-## Partie 3 - Division (bonus)
-
-Maintenant que tu as réussi à faire une soustraction, nous allons faire une division. Celle-ci est un peu plus compliquée car il faut gérer le cas où l'utilisateur entre 0.
-
-Si l'utilisateur entre 0, tu dois afficher un message d'erreur et arrêter le script.
-
-Pour cela, nous allons utiliser le `if`, que nous verrons dans la suite.
+Le gros avantage c'est que tu peux faire des retours à la ligne dans tes strings sans avoir à utiliser le caractère `\n` !
 
 ```js
-const number = Number(await prompt('Entre un nombre : '));
+const name = 'Jean-Michel';
 
-if (number === 0) {
-  console.log('Erreur !');
-  process.exit(1); // permet d'arrêter le script
+const message = `Hello ${name} !
+
+How are you ?`;
+
+console.log(message);
+```
+
+Je te propose de remplacer les 4 `console.log` de l'exercice précédent avec les template string !
+
+## Partie 3 - Erreur !
+
+Que ce passe-t-il si l'email du destinataire est vide ? Ou si le sujet est vide ? Ou si le message est vide ? RIEN !
+
+Pas bien...
+
+Ajoutes un `if` qui, si un des champs est vide, affiche une erreur et arrête le script.
+
+Pour vérifier si une `string` est vide tu peux utiliser la méthode `.length` :
+
+```js
+const name = 'Jean-Michel';
+
+console.log(name.length); // 11
+```
+
+Cette méthode va compter le nombre de caractères dans la string. Si la string est vide, elle retournera `0`.
+
+Ta tâche est de vérifier que l'email comme l'objet ne soit pas vide.
+
+Pour vérifier deux chose dans notre `if` on va utiliser l'opérateur `||` (OR) :
+
+```js
+if (value1 === 0 || value2 === 0) {
+  // ...
 }
-
-// reste du script
 ```
 
-Le `if` permet d'afficher du rendu conditionnellement. Ensuite, si le "process.exit(1)" est appelé, nous arrêtons totalement le script et affichons une erreur.
+Ici on va rentrer dans le `if` si **une des deux conditions** est vraie.
 
-Étant donné que nous arrêtons le script, la suite du code ne sera jamais exécutée.
+Par exemple :
 
-![](images/if-explication.png)
+```js
+if (true || false) {
+  // ...
+}
+```
+
+Ici on va rentrer dans le `if` car **une des deux conditions** est vraie.
+
+On ne rentrera pas dans le `if` si **les deux conditions** sont fausses uniquement :
+
+```js
+if (false || false) {
+  // ...
+}
+```

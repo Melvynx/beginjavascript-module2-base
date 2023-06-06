@@ -1,16 +1,23 @@
+// Importe la fonction prompt depuis le fichier helper.js
 import { prompt } from '../helper.js';
 
-console.log('ADDITION-MASTER ™️');
+console.log('NODE-MAILER ™️');
 
-const firstNumber = Number(await prompt('Enter the first number : '));
+const email = await prompt('Enter recipient your email : ');
+const object = await prompt('Enter your object : ');
+const message = await prompt('Enter your message : ');
 
-// Si firstNumber est totalement égal à 0, alors on affiche une erreur et on quitte le programme
-if (firstNumber === 0) {
-  console.log("Error : firstNumber can't be 0");
+if (email.length === 0 || object.length === 0) {
+  console.log('You must enter all fields');
   process.exit(1);
 }
 
-const secondNumber = Number(await prompt('Enter the second number : '));
+const result = `
 
-// J'ai changé le signe + par un /
-console.log('The result of division is : ', firstNumber / secondNumber);
+The mail is sending...
+
+To user : ${email}
+Object : ${object}
+${message}`;
+
+console.log(result);
