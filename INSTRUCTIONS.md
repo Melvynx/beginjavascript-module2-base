@@ -16,7 +16,7 @@ Pour "lancer" ton script une fois que tu as terminé, tu pourrais faire :
 npm run start
 ```
 
-## Partie 2 - Ajout d'un commentaire
+## Partie 2 - Ajout d'un commentaire
 
 Le deuxième grâle c'est d'ajouter des commentaires. En l'occurence tu vas ajouter un commentaire pour expliquer ce que tu as compris de `console.log` jusqu'à maintenant.
 
