@@ -1,12 +1,12 @@
 // 🦁 Import cette function
 // import { prompt } from "./helper.js";
 
-console.log('ADDITION-MASTER ™️');
+console.log("NODE-MAILER ™️");
 
-// 🦁 Utilise la function "prompt" pour demander le premier nombre à l'utilisateur
-// 🦁 Stocke le résultat dans une variable "firstNumber" et utilise `Number()` pour convertir la valeur en nombre
-// 💡 await prompt('Enter your name: ') permet de récupérer la valeur saisie par l'utilisateur
+// 🦁 Récupère le mail, l'objet et le message
 
-// 🦁 Fait la même chose pour la variable "secondNumber"
-
-// 🦁 Affiche l'addition des deux nombres
+// 🦁 Affiche une log
+// - Comme quoi le mail est entrain d'être envoyé
+// - Le mail du destinataire
+// - L'objet du mail
+// - Le message du mail
