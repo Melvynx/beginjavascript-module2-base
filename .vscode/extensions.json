@@ -10,6 +10,7 @@
     "visualstudioexptteam.vscodeintellicode",
     "sburg.vscode-javascript-booster",
     "meganrogge.template-string-converter",
-    "dracula-theme.theme-dracula"
+    "dracula-theme.theme-dracula",
+    "bierner.markdown-preview-github-styles"
   ]
 }
