@@ -72,7 +72,7 @@ Maintenant que tu as réussi à faire une addition, nous allons faire une soustr
 
 ## Partie 3 - Division (bonus)
 
-Maintenant que tu as réussi à faire une soustraction, nous allons faire une division. Celle-ci est un peu plus compliquée car il faut gérer le cas où l'utilisateur entre 0.
+Maintenant que tu as réussi à faire une soustraction, nous allons faire une division. Celle-ci est un peu plus compliquée car il faut gérer le cas où l'utilisateur entre 0 pour le deuxième nombre.
 
 Si l'utilisateur entre 0, tu dois afficher un message d'erreur et arrêter le script.
 
@@ -95,7 +95,7 @@ Le `if` permet d'afficher du rendu conditionnellement. Ensuite, si le "process.e
 
 ![](images/if-explication.png)
 
-## Partie 4 - isNaN
+## Partie 4 - isNaN (bonus)
 
 Fait un test... lorsque que le programme te demande d'inscrire un nombre, si tu écris un mot, que se passe-t-il ?
 

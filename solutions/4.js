@@ -4,18 +4,18 @@ console.log('ADDITION-MASTER ™️');
 
 const firstNumber = Number(await prompt('Enter the first number : '));
 
-// Si firstNumber est totalement égal à 0, alors on affiche une erreur et on quitte le programme
-if (firstNumber === 0) {
-  console.log("Error : firstNumber can't be 0");
-  process.exit(1);
-}
-
 if (Number.isNaN(firstNumber)) {
   console.log('Error : firstNumber is not a number');
   process.exit(1);
 }
 
 const secondNumber = Number(await prompt('Enter the second number : '));
+
+// Si secondNumber est totalement égal à 0, alors on affiche une erreur et on quitte le programme
+if (secondNumber === 0) {
+  console.log("Error : secondNumber can't be 0");
+  process.exit(1);
+}
 
 if (Number.isNaN(secondNumber)) {
   console.log('Error : secondNumber is not a number');
