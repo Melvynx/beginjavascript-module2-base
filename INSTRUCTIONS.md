@@ -1,125 +1,85 @@
-Dans cet exercice, nous allons créer "ADDITION-MASTER ™️" ! C'est une petite application qui permet d'additionner deux nombres.
+On va continuer de travailler sur "ADDITION-MASTER ™️" afin d'ajouter une feature très importante :
 
-Je tiens à te dire que **tu ne sais pas encore comment faire**, mais je te lance directement dans la fosse aux lions avec un exercice **compliqué** afin de maximiser ta compréhension.
+- Le choix de l'opérateur !
 
-C'est ce que j'appelle la **difficulté désirable**, ton cerveau mémorise mieux les choses si tu es en difficulté.
+Une fois que l'utilisateur aura choisis l'opérateur, on va être capable de lui demander les deux nombres à additionner et lui donner le résultat en fonction de l'opérateur choisis.
 
-Dans cet exercice, nous allons utiliser des notions que j'expliquerai dans la suite du cours... Le but ici est de te débrouiller, d'échouer, de réessayer, puis de regarder les vidéos solutions pour apprendre rapidement.
+Tu as déjà vue les if, donc ça devrait être un peu plus simple cette fois !
 
-Pourquoi ?
+## Partie 1 - Choix de l'opérateur
 
-Le fait de voir "vite fait" plein de sujets _que tu ne connais pas encore_ va créer de la curiosité, et quand je t'expliquerai comment ça fonctionne, le fait d'avoir fait un exercice maintenant te fera retenir entre 2x et 3x mieux.
+On va commencer par demander à l'utilisateur de choisir l'opérateur qu'il souhaite utiliser.
 
-N'oublie pas que tout ce que je fais, c'est pour maximiser ta compréhension globale. Et surtout, n'oublie pas que si c'est compliqué, c'est que **tu apprends**.
+Pour ça, on va afficher dans la console un message qui décrit, pour chaque opérateur un nombre :
 
-## Partie 1 - Simple addition
-
-Dans le fichier [script.js](./script.js), tu trouveras un code rempli de commentaires. Ta tâche est de faire en sorte que quand je lance le script, j'obtienne le résultat suivant :
-
-![](./images/solution1.png)
-
-Pour cela, tu vas utiliser plein de choses que tu ne connais pas encore, mais ce n'est pas grave, tu vas apprendre en faisant.
-
-1. La fonction `prompt` que j'ai créée dans [helper.js](./helper.js), qui te permet de récupérer l'input d'un utilisateur.
-
-Tu ne connais pas encore les fonctions, mais ne t'en fais pas. Il te suffit pour l'instant de savoir **comment les utiliser** :
-
-```js
-const result = await prompt('Quel est ton nom ?');
-console.log(result);
+```bash
+1 - Addition
+2 - Soustraction
 ```
 
-Cela fera apparaître ceci :
+(pour l'instant on va que faire l'addition et la soustraction, on verra pour les autres opérateurs plus tard)
 
-![](./images/prompt-fn.png)
+On va ensuite demander à l'utilisateur de choisir un nombre entre 1 et 2.
 
-Le `await` permet d'**attendre** que l'utilisateur écrive et appuie sur entrée.
+Si il choisis autre chose que 1 ou 2, on va lui dire que son choix n'est pas valide et arrêter le script.
 
-Le `result` est toujours une **chaîne de caractères** (string) car c'est ce que l'utilisateur a écrit.
+Ensuite, on fait comme ce qu'on avait fait sur l'exercice conçerantn les number sauf qu'on va utiliser, à la fin, un switch !
 
-2. Transformer une chaîne de caractères en nombre
+Ne t'en fais... je t'explique comment faire car pour la partie 1 les émojis sont là pour t'aider.
 
-Dans notre exercice, nous devrons transformer une chaîne de caractères en un nombre. Pour cela, nous utiliserons la fonction `Number` qui fait cela !
-
-```js
-const result = Number('123');
-console.log(result); // 123
-```
-
-3. Afficher un résultat
-
-Pour afficher le résultat, tu auras besoin d'utiliser une opération arithmétique. Je te laisse consulter [l'opération "+"](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Addition) pour trouver la bonne.
-
-Ensuite, tu peux afficher le résultat en utilisant `console.log`, qui accepte plusieurs arguments.
-
-```js
-const a = 1;
-const b = 2;
-
-console.log('Variable A : ', a, ', Variable B : ', b);
-// Variable A : 1, Variable B : 2
-```
-
-Allez, je te laisse te lancer
-
-, on se retrouve dans la solution !
-
-## Partie 2 - Soustraction
-
-Maintenant que tu as réussi à faire une addition, nous allons faire une soustraction. Tu peux garder le même code, mais le modifier pour utiliser une soustraction.
-
-- [Opérateur de soustraction](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
-
-## Partie 3 - Division (bonus)
-
-Maintenant que tu as réussi à faire une soustraction, nous allons faire une division. Celle-ci est un peu plus compliquée car il faut gérer le cas où l'utilisateur entre 0.
-
-Si l'utilisateur entre 0, tu dois afficher un message d'erreur et arrêter le script.
-
-Pour cela, nous allons utiliser le `if`, que nous verrons dans la suite.
-
-```js
-const number = Number(await prompt('Entre un nombre : '));
-
-if (number === 0) {
-  console.log('Erreur !');
-  process.exit(1); // permet d'arrêter le script
-}
-
-// reste du script
-```
-
-Le `if` permet d'afficher du rendu conditionnellement. Ensuite, si le "process.exit(1)" est appelé, nous arrêtons totalement le script et affichons une erreur.
-
-Étant donné que nous arrêtons le script, la suite du code ne sera jamais exécutée.
-
-![](images/if-explication.png)
-
-## Partie 4 - isNaN
-
-Fait un test... lorsque que le programme te demande d'inscrire un nombre, si tu écris un mot, que se passe-t-il ?
-
-Réponse : la conversion produit `NaN` (Not a Number).
-
-C'est la manière que JavaScript a de dire "je ne sais pas ce que c'est, mais en tout qu'à c'est pas un nombre".
-
-C'est très pratique car ça nous permet de **savoir** que l'utilisateur n'a pas inscrit la bonne valeur et donc de pouvoir afficher une erreur !
-
-Ton travail, est d'utiliser le `if` avec la fonction `Number.isNaN` pour afficher une erreur lorsque l'utilisateur n'entre pas un nombre.
-
-Voici ce que ça devrait donner :
+Résultat attendu :
 
 ```bash
 ADDITION-MASTER ™️
-Enter the first number : aaa
-Error : firstNumber is not a number
+Choose an operator :
+1. Addition
+2. Soustraction
+Enter the operator : 2
+Enter the first number : 5
+Enter the second number : 5
+The result of soustraction is :  0
+
+# Ou avec la addition
+ADDITION-MASTER ™️
+Choose an operator :
+1. Addition
+2. Soustraction
+Enter the operator : 1
+Enter the first number : 5
+Enter the second number : 5
+The result of addition is :  10
 ```
 
-Pour faire ça, il faut utiliser les `if` comme on l'a fait précédemment en vérifiant que le nombre est `NaN`.
+## Partie 2 - Ajout de la multiplication et de la division
 
-```js
-if (Number.isNaN(number)) {
-  // Si le code rentre ici, c'est que le nombre est NaN
-  // Afficher une erreur et arrêter le script
-}
+Ici on va ajouter la multiplication et la division, au début du script ce sera écrit :
+
+```bash
+Choose an operator :
+1. Addition
+2. Soustraction
+3. Multiplication
+4. Division
+```
+
+Il faudra modifier le `if` vérifie si l'opérateur est valide pour qu'il prenne en compte les nouveaux opérateurs. (3 et 4)
+
+Et rajouter un if pour la division qui vérifie que le deuxième nombre n'est pas égal à 0.
+
+Pour ça, dans le if il faudra vérifier que l’opérateur est égal à 4 et que le deuxième nombre est égal à 0, car cette vérification ne se produit QUE pour la division.
+
+Résultat attendu :
+
+```bash
+ADDITION-MASTER ™️
+Choose an operator :
+1. Addition
+2. Soustraction
+3. Multiplication
+4. Division
+Enter the operator : 4
+Enter the first number : 1
+Enter the second number : 0
+
+Error : division by 0
 ```

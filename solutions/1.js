@@ -1,13 +1,37 @@
-// Importe la fonction prompt depuis le fichier helper.js
 import { prompt } from '../helper.js';
 
 console.log('ADDITION-MASTER ™️');
 
-// Demande le premier nombre à l'utilisateur et stocke le résultat dans la variable firstNumber
+console.log(`Choose an operator :
+1. Addition
+2. Soustraction`);
+
+const operator = Number(await prompt('Enter the operator : '));
+
+if (operator !== 1 && operator !== 2) {
+  console.log('Error : operator is not 1 or 2');
+  process.exit(1);
+}
+
 const firstNumber = Number(await prompt('Enter the first number : '));
 
-// Demande le deuxième nombre à l'utilisateur et stocke le résultat dans la variable secondNumber
+if (Number.isNaN(firstNumber)) {
+  console.log('Error : firstNumber is not a number');
+  process.exit(1);
+}
+
 const secondNumber = Number(await prompt('Enter the second number : '));
 
-// Affiche l'addition des deux nombres
-console.log("Le résultat de l'addition est : ", firstNumber + secondNumber);
+if (Number.isNaN(secondNumber)) {
+  console.log('Error : secondNumber is not a number');
+  process.exit(1);
+}
+
+switch (operator) {
+  case 1:
+    console.log('The result of addition is : ', firstNumber + secondNumber);
+    break;
+  case 2:
+    console.log('The result of soustraction is : ', firstNumber - secondNumber);
+    break;
+}
