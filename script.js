@@ -1,7 +1,7 @@
 // 🦁 Import cette function
 // import { prompt } from "./helper.js";
 
-console.log('ADDITION-MASTER ™️');
+console.log("ADDITION-MASTER ™️");
 
 // 🦁 Utilise la function "prompt" pour demander le premier nombre à l'utilisateur
 // 🦁 Stocke le résultat dans une variable "firstNumber" et utilise `Number()` pour convertir la valeur en nombre

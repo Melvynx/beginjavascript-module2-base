@@ -13,7 +13,6 @@
   "files.exclude": {
     "USE_GITIGNORE": true
   },
-  "javascript.validate.enable": false,
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
@@ -35,5 +34,7 @@
   "git.autofetch": true,
   "editor.tabSize": 2,
   "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 6
+  "workbench.editor.limit.value": 6,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "javascript.validate.enable": true
 }
