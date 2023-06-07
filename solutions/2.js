@@ -11,7 +11,7 @@ console.log(`Choose an operator :
 const operator = Number(await prompt('Enter the operator : '));
 
 if (operator !== 1 && operator !== 2 && operator !== 3 && operator !== 4) {
-  console.log('Error : operator is not 1 or 2');
+  console.log('Error : operator is not 1, 2, 3 or 4');
   process.exit(1);
 }
 
@@ -40,5 +40,11 @@ switch (operator) {
     break;
   case 2:
     console.log('The result of soustraction is : ', firstNumber - secondNumber);
+    break;
+  case 3:
+    console.log('The result of multiplication is : ', firstNumber * secondNumber);
+    break;
+  case 4:
+    console.log('The result of division is : ', firstNumber / secondNumber);
     break;
 }

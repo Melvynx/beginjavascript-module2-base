@@ -8,27 +8,37 @@ console.log(`Choose an operator :
 3. Multiplication
 4. Division`);
 
-const operator = Number(await prompt('Enter the operator : '));
+let operator = 0;
 
-if (operator !== 1 && operator !== 2 && operator !== 3 && operator !== 4) {
-  console.log('Error : operator is not 1, 2, 3 or 4');
-  process.exit(1);
+while (operator === 0) {
+  const tempOperator = Number(await prompt('Enter the operator : '));
+
+  if (
+    tempOperator !== 1 &&
+    tempOperator !== 2 &&
+    tempOperator !== 3 &&
+    tempOperator !== 4
+  ) {
+    console.log('\nError : operator is not 1, 2, 3 or 4 ! Retry.');
+  } else {
+    operator = tempOperator;
+  }
 }
 
 const firstNumber = Number(await prompt('Enter the first number : '));
 
-if (Number.isNaN(firstNumber) || firstNumber > 100000000000000) {
+if (Number.isNaN(firstNumber) || Math.abs(firstNumber) > 100000000000000) {
   console.log(
-    'Error : firstNumber is not a number or is too big (max: 100000000000000)'
+    'Error : firstNumber is not a number or is too big / too small (max: 100000000000000)'
   );
   process.exit(1);
 }
 
 const secondNumber = Number(await prompt('Enter the second number : '));
 
-if (Number.isNaN(secondNumber) || secondNumber > 100000000000000) {
+if (Number.isNaN(secondNumber) || Math.abs(secondNumber) > 100000000000000) {
   console.log(
-    'Error : secondNumber is not a number or is too big (max: 100000000000000)'
+    'Error : secondNumber is not a number or is too big / too small (max: 100000000000000)'
   );
   process.exit(1);
 }
