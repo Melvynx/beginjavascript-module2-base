@@ -94,3 +94,32 @@ Le `if` permet d'afficher du rendu conditionnellement. Ensuite, si le "process.e
 Étant donné que nous arrêtons le script, la suite du code ne sera jamais exécutée.
 
 ![](images/if-explication.png)
+
+## Partie 4 - isNaN
+
+Fait un test... lorsque que le programme te demande d'inscrire un nombre, si tu écris un mot, que se passe-t-il ?
+
+Réponse : la conversion produit `NaN` (Not a Number).
+
+C'est la manière que JavaScript a de dire "je ne sais pas ce que c'est, mais en tout qu'à c'est pas un nombre".
+
+C'est très pratique car ça nous permet de **savoir** que l'utilisateur n'a pas inscrit la bonne valeur et donc de pouvoir afficher une erreur !
+
+Ton travail, est d'utiliser le `if` avec la fonction `Number.isNaN` pour afficher une erreur lorsque l'utilisateur n'entre pas un nombre.
+
+Voici ce que ça devrait donner :
+
+```bash
+ADDITION-MASTER ™️
+Enter the first number : aaa
+Error : firstNumber is not a number
+```
+
+Pour faire ça, il faut utiliser les `if` comme on l'a fait précédemment en vérifiant que le nombre est `NaN`.
+
+```js
+if (Number.isNaN(number)) {
+  // Si le code rentre ici, c'est que le nombre est NaN
+  // Afficher une erreur et arrêter le script
+}
+```
