@@ -39,7 +39,7 @@ Les entrées vont ce situer dans `/journal`.
 Pour récupérer le path de notre dossier on va utiliser :
 
 ```js
-const journalDir = path.join(process.cwd(), 'journal');
+const journalDir = path.join(process.cwd(), "journal");
 ```
 
 Ici `journalDir` représente le chemin qui va à notre dossier, hésite pas à le log.
@@ -87,10 +87,10 @@ Puis on va pouvoir faire un `switch` sur le premier argument pour appeler la bon
 
 ```js
 switch (args[0]) {
-  case 'add':
-    await addEntry(args[1], args.slice(2).join(' '));
+  case "add":
+    await addEntry(args[1], args.slice(2).join(" "));
     break;
-  case 'list':
+  case "list":
     await listEntries();
     break;
   default:
@@ -142,7 +142,7 @@ Si il dit oui, tu supprime. Sinon tu annule et tu passe à autre chose.
 
 Pour supprimer tu peux utiliser [`fs.unlink`](https://nodejs.org/api/fs.html#fspromisesunlinkpath).
 
-## Partie 3 : Search
+## Partie 3 : Search et open
 
 Cette parties est la plus intense. De la même manière que `delete` tu vas rajouter un nouveau cas dans notre `switch` afin de gérer le search.
 
@@ -160,6 +160,8 @@ Attention, pour être plus rapide tu peux te servir de [`Promise.all`](https://d
 Si il y a aucune entrée qui contient le texte recherché tu affiches un message d'erreur.
 
 Sinon tu affiches la liste des entrées qui contiennent le texte recherché.
+
+Tu ajouteras aussi la méthode `openEntry` ainsi que son action pour pouvoir lire le contenue d'un fichier.
 
 ## Conclusion
 
