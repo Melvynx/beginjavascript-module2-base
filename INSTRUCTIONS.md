@@ -44,7 +44,7 @@ const journalDir = path.join(process.cwd(), "journal");
 
 Ici `journalDir` représente le chemin qui va à notre dossier, hésite pas à le log.
 
-Dans notre script, on va utiliser les modules NodeJS `fs/promise` et `path` pour gérer notre dossier.
+Dans notre script, on va utiliser les modules NodeJS `fs/promises` et `path` pour gérer notre dossier.
 
 La première étape va être de récupérer notre dossier. Pour ça on va utiliser les méthodes `fs.access` pour vérifier que le dossier existe et `fs.mkdir` pour le créer si il n'existe pas.
 

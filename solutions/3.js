@@ -119,6 +119,7 @@ Usage:
 - Pour lister les entrées : node journal.js list
 - Pour ajouter une entrée : node journal.js add <date> <content>
 - Pour supprimer une entrée : node journal.js delete <date>
+- Pour ouvrir une entrée : node journal.js open <date>
 - Pour rechercher une entrée : node journal.js search <query>
 `);
   }
