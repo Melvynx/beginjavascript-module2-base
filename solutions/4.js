@@ -1,5 +1,7 @@
 import { prompt } from '../helper.js';
 
+const NUMBER_LIMIT = 100000000000000;
+
 console.log('ADDITION-MASTER ™️');
 
 console.log(`Choose an operator :
@@ -17,18 +19,18 @@ if (operator !== 1 && operator !== 2 && operator !== 3 && operator !== 4) {
 
 const firstNumber = Number(await prompt('Enter the first number : '));
 
-if (Number.isNaN(firstNumber) || Math.abs(firstNumber) > 100000000000000) {
+if (Number.isNaN(firstNumber) || Math.abs(firstNumber) > NUMBER_LIMIT) {
   console.log(
-    'Error : firstNumber is not a number or is too big / too small (max: 100000000000000)'
+    `Error : firstNumber is not a number or is too big / too small (max: ${NUMBER_LIMIT})`
   );
   process.exit(1);
 }
 
 const secondNumber = Number(await prompt('Enter the second number : '));
 
-if (Number.isNaN(secondNumber) || Math.abs(secondNumber) > 100000000000000) {
+if (Number.isNaN(secondNumber) || Math.abs(secondNumber) > NUMBER_LIMIT) {
   console.log(
-    'Error : secondNumber is not a number or is too big / too small (max: 100000000000000)'
+    `Error : secondNumber is not a number or is too big / too small (max: ${NUMBER_LIMIT})`
   );
   process.exit(1);
 }
