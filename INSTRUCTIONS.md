@@ -99,4 +99,4 @@ if (true || false) {
 }
 ```
 
-Ici, on entre dans le `if` car **l'une des deux conditions** est
+C'est à toi de jouer !
