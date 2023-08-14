@@ -36,4 +36,4 @@ if (Number.isNaN(secondNumber)) {
 // 💡     break;
 // 💡   ...
 // 💡 }
-console.log("The result of division is : ", firstNumber + secondNumber);
+console.log("The result of division is : ", firstNumber / secondNumber);
