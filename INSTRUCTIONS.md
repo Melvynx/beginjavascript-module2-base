@@ -1,4 +1,4 @@
-La même chose que pour l'exercice sur les nombres, on va directement dans des exercices sur les chaînes de caractères pour te mettre dans le bain.
+La même chose que pour l'exercice sur les nombres, on va directement faire des exercices sur les chaînes de caractères pour te mettre dans le bain.
 
 Dans cet exercice, on va créer une petite application qui envoie des mails pour nous (mais on ne va pas vraiment les envoyer) !
 
@@ -59,7 +59,7 @@ How are you ?`;
 console.log(message);
 ```
 
-Je te propose de remplacer les 4 `console.log` de l'exercice précédent par les template strings !
+Je te propose de remplacer les 4 `console.log` de l'exercice précédent par des template strings !
 
 ## Partie 3 - Erreur !
 
