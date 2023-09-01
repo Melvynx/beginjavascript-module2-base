@@ -1,6 +1,6 @@
 Dans cet exercice, nous allons créer "ADDITION-MASTER ™️" ! C'est une petite application qui permet d'additionner deux nombres.
 
-Je tiens à te dire que **tu ne sais pas encore comment faire**, mais je te lance directement dans la fosse aux lions avec un exercice **compliqué** afin de maximiser ta compréhension.
+Je tiens à te dire que **tu ne sais pas encore comment faire**, mais je te lance directement dans la fosse aux lions avec un exercice **complexe** afin de maximiser ta compréhension.
 
 C'est ce que j'appelle la **difficulté désirable**, ton cerveau mémorise mieux les choses si tu es en difficulté.
 
@@ -25,7 +25,7 @@ Pour cela, tu vas utiliser plein de choses que tu ne connais pas encore, mais ce
 Tu ne connais pas encore les fonctions, mais ne t'en fais pas. Il te suffit pour l'instant de savoir **comment les utiliser** :
 
 ```js
-const result = await prompt('Quel est ton nom ?');
+const result = await prompt("Quel est ton nom ?");
 console.log(result);
 ```
 
@@ -42,7 +42,7 @@ Le `result` est toujours une **chaîne de caractères** (string) car c'est ce qu
 Dans notre exercice, nous devrons transformer une chaîne de caractères en un nombre. Pour cela, nous utiliserons la fonction `Number` qui fait cela !
 
 ```js
-const result = Number('123');
+const result = Number("123");
 console.log(result); // 123
 ```
 
@@ -56,13 +56,11 @@ Ensuite, tu peux afficher le résultat en utilisant `console.log`, qui accepte p
 const a = 1;
 const b = 2;
 
-console.log('Variable A : ', a, ', Variable B : ', b);
+console.log("Variable A : ", a, ", Variable B : ", b);
 // Variable A : 1, Variable B : 2
 ```
 
-Allez, je te laisse te lancer
-
-, on se retrouve dans la solution !
+Allez, je te laisse te lancer, on se retrouve dans la solution !
 
 ## Partie 2 - Soustraction
 
@@ -79,10 +77,10 @@ Si l'utilisateur entre 0, tu dois afficher un message d'erreur et arrêter le sc
 Pour cela, nous allons utiliser le `if`, que nous verrons dans la suite.
 
 ```js
-const number = Number(await prompt('Entre un nombre : '));
+const number = Number(await prompt("Entre un nombre : "));
 
 if (number === 0) {
-  console.log('Erreur !');
+  console.log("Erreur !");
   process.exit(1); // permet d'arrêter le script
 }
 
@@ -97,15 +95,15 @@ Le `if` permet d'afficher du rendu conditionnellement. Ensuite, si le "process.e
 
 ## Partie 4 - isNaN (bonus)
 
-Fait un test... lorsque que le programme te demande d'inscrire un nombre, si tu écris un mot, que se passe-t-il ?
+Fais un test... lorsque le programme te demande d'inscrire un nombre, si tu écris un mot, que se passe-t-il ?
 
 Réponse : la conversion produit `NaN` (Not a Number).
 
-C'est la manière que JavaScript a de dire "je ne sais pas ce que c'est, mais en tout qu'à c'est pas un nombre".
+C'est la manière qu'a JavaScript de dire "je ne sais pas ce que c'est, mais en tout cas ce n'est pas un nombre".
 
 C'est très pratique car ça nous permet de **savoir** que l'utilisateur n'a pas inscrit la bonne valeur et donc de pouvoir afficher une erreur !
 
-Ton travail, est d'utiliser le `if` avec la fonction `Number.isNaN` pour afficher une erreur lorsque l'utilisateur n'entre pas un nombre.
+Ton travail est d'utiliser le `if` avec la fonction `Number.isNaN` pour afficher une erreur lorsque l'utilisateur n'entre pas un nombre.
 
 Voici ce que ça devrait donner :
 
