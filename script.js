@@ -1,34 +1,34 @@
-// Commence par importer les modules nécessaire
+// Commence par importer les modules nécessaires
 // import fs from 'fs/promises';
 // import path from 'path';
 
-// Importer ce fichier pour utiliser la fonction prompt
+// Importe ce fichier pour utiliser la fonction prompt
 // import { prompt } from './helper.js';
 
-// 🦁 Déclarer `journalDir` en utilisant `path.join`
+// 🦁 Déclare `journalDir` en utilisant `path.join`
 // 💡 `process.cwd()` retourne le chemin du dossier courant
-// 💡 Tu veux join le chemin du dossier courant avec journal
+// 💡 Tu veux joindre le chemin du dossier courant avec journal
 
-// 🦁 Créer une function ensureJournalDirExists qui essaie d'accéder au dossier journal
-// 💡 Utiliser `fs.access` pour vérifier si le dossier existe
-// 🦁 Si c'est pas le cas il créer le dossier (utilise try/catch pour gérer l'erreur)
+// 🦁 Crée une fonction ensureJournalDirExists qui essaie d'accéder au dossier journal
+// 💡 Utilise `fs.access` pour vérifier si le dossier existe
+// 🦁 Si ce n'est pas le cas, il crée le dossier (utilise try/catch pour gérer l'erreur)
 
-// 🦁 Créer une function listEntries qui liste les fichiers du dossier journal
-// 💡 Utiliser `fs.readdir` pour lister les fichiers
+// 🦁 Crée une fonction listEntries qui liste les fichiers du dossier journal
+// 💡 Utilise `fs.readdir` pour lister les fichiers
 
-// 🦁 Créer une function addEntry qui prend en paramètre une date et un contenu
-// 👉 Si la date est 'today' on utilise la date du jour
-// 🦁 Utilise `path.join` pour créer le chemin du fichier grace à la date
-// 🦁 Récupère le contenue du fichier si il existe et remplace le paramètre contenu par le contenu existant + le nouveau
-// 💡 Utilise try/catch pour gérer l'erreur si le fichier existe pas
+// 🦁 Crée une fonction addEntry qui prend en paramètre une date et un contenu
+// 👉 Si la date est 'today', on utilise la date du jour
+// 🦁 Utilise `path.join` pour créer le chemin du fichier grâce à la date
+// 🦁 Récupère le contenu du fichier s'il existe et remplace le paramètre contenu par le contenu existant + le nouveau
+// 💡 Utilise try/catch pour gérer l'erreur si le fichier n'existe pas
 // 🦁 Utilise `fs.writeFile` pour écrire le contenu dans le fichier
 
-// 🦁 Créer une function main qui appelle `ensureJournalDirExists`
+// 🦁 Crée une fonction main qui appelle `ensureJournalDirExists`
 // 🦁 Récupère les arguments de la ligne de commande avec `process.argv.slice(2)`
-// 🦁 Utilise un switch pour appeler la bonne function en fonction du premier argument
-// 🦁 En fonction du paramètre, appel addEntry ou listEntries
+// 🦁 Utilise un switch pour appeler la bonne fonction en fonction du premier argument
+// 🦁 En fonction du paramètre, appelle addEntry ou listEntries
 
-// 💡 Si aucun cas correspond tu peux afficher cette log :
+// 💡 Si aucun cas ne correspond, tu peux afficher ce log :
 /*
 console.log(`
 Usage:
