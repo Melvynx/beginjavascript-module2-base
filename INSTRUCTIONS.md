@@ -1,8 +1,8 @@
-On va continuer de travailler sur "ADDITION-MASTER ™️" afin d'ajouter une fonctionnalité très importante :
+On va continuer à travailler sur "ADDITION-MASTER ™️" afin d'ajouter une fonctionnalité très importante :
 
 - Le choix de l'opérateur !
 
-Une fois que l'utilisateur aura choisi l'opérateur, on va être capable de lui demander les deux nombres à additionner et lui donner le résultat en fonction de l'opérateur choisi.
+Une fois que l'utilisateur aura choisi l'opérateur, on sera capable de lui demander les deux nombres à additionner et de lui donner le résultat en fonction de l'opérateur choisi.
 
 Tu as déjà vu les `if`, donc ça devrait être un peu plus simple cette fois !
 
@@ -88,13 +88,11 @@ Error: division by 0
 
 ## Partie 3 - Ajout d'une limite
 
-L'utilisateur est capable de mettre n
+L'utilisateur est capable de mettre n'importe quel nombre, même un nombre énorme pour l'instant :
 
-'importe quel nombre, même un nombre énorme pour l'instant :
-
-```bash
+````bash
 ADDITION-MASTER ™️
-Choose an operator:
+Choisis un opérateur :
 1. Addition
 2. Soustraction
 3. Multiplication
@@ -168,7 +166,7 @@ Donc à l'intérieur de la boucle, on va demander à l'utilisateur de choisir un
 
 Dans le cas contraire, on affiche un message d'erreur du style "You can only choose 1, 2, 3 or 4" et on redemande à l'utilisateur de choisir un opérateur, car tant que la variable `operator` n'est pas assignée à un nombre valide, la boucle continue de s'exécuter.
 
-Tu remarqueras que j'utilise `let` ici et pas `const`, car on va modifier la valeur de `operator` dans la boucle.
+Tu remarqueras que j'utilise `let` ici et non `const`, car on va modifier la valeur de `operator` dans la boucle.
 
 Cet exercice est compliqué car tu ne connais (normalement) pas `while`. Tu vas devoir chercher sur internet comment ça fonctionne et comment l'utiliser.
 
@@ -199,3 +197,4 @@ Enter the operator: s
 
 Error: operator is not 1, 2, 3 or 4! Retry.
 ```
+````
