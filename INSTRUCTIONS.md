@@ -80,7 +80,7 @@ $ node script.js help
 Les deux premiers arguments ne nous intéressent pas, on va donc utiliser `slice` pour récupérer les arguments qui nous intéressent.
 
 ```js
-const args = process.env.argv.slice(2);
+const args = process.argv.slice(2);
 ```
 
 Puis on va pouvoir faire un `switch` sur le premier argument pour appeler la bonne fonction.
