@@ -40,7 +40,7 @@ npm install
 
 2. Ouvrir les settings VSCode en JSON avec CMD + SHIFT + P (ou CTRL sur Windows) et écrire "Open User Settings (json)"
 
-Une fois le fichier ouvert, copier le contenue de [settings.beginjavascript.json](.vsocde/settings.beginjavascript.json) dans le fichier.
+Une fois le fichier ouvert, copier le contenue de [settings.beginjavascript.json](https://raw.githubusercontent.com/Melvynx/beginjavascript-module2-base/main/.vscode/settings.beginjavascript.json) dans le fichier.
 
 Voilà !
 
