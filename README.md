@@ -27,9 +27,9 @@ npm -v
 - Ouvrir un terminal
 
 ```bash
-git clone https://github.com/Melvynx/beginjavascript-setup-vscode.git
+git clone https://github.com/Melvynx/beginjavascript-module2-base
 
-cd beginjavascript-setup-vscode
+cd beginjavascript-module2-base
 
 npm install
 ```
